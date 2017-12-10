@@ -189,9 +189,9 @@ open class JSONWarehouse: Warehouseable, WarehouseCacheable {
     }
     
     static var cacheDirectory: URL {
-        let url = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!
+        let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         
-        let writeDirectory = url.appendingPathComponent("com.thatthinginswift.pantry")
+        let writeDirectory = url.appendingPathComponent("com.trala.cache")
         return writeDirectory
     }
     
